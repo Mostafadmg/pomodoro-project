@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts Optimized Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Load Fonts: Kumbh Sans, Roboto Slab, Space Mono -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Frontend Mentor | Pomodoro app</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Header and Tabs -->
+      <header class="header">
+        <h1 class="header__title">pomodoro</h1>
+
+        <div class="tab-group tab-font">
+          <div class="tab-options"><p>pomodoro</p></div>
+          <div class="tab-options"><p>short break</p></div>
+          <div class="tab-options"><p>long break</p></div>
+        </div>
+      </header>
+
+      <!-- Timer and Main Page -->
+      <main class="timer-container">
+        <div class="timer-display">
+          <div class="outer-border">
+            <div class="timer-and-pause">
+              <div class="time timer-font">17:59</div>
+              <div class="pause-and-restart pause-font">Pause</div>
+            </div>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="249"
+            height="249"
+            viewBox="0 0 249 249"
+            fill="none"
+            class="progress-bar"
+          >
+            <!-- Background circle (optional, for visual reference) -->
+            <circle
+              cx="124"
+              cy="124"
+              r="120"
+              stroke="#161932"
+              stroke-width="8"
+              fill="none"
+              opacity="0.1"
+            />
+
+            <!-- Progress circle -->
+            <circle
+              class="progress-circle"
+              cx="124"
+              cy="124"
+              r="120"
+              stroke="#F87070"
+              stroke-width="8"
+              fill="none"
+              stroke-linecap="round"
+              transform="rotate(-90 124 124)"
+              style="transition: stroke-dashoffset 1s linear"
+            />
+          </svg>
+        </div>
+
+        <div class="setting">
+          <button class="setting-button">
+            <img src="./starter-code/assets/icon-settings.svg" alt="settings" />
+          </button>
+        </div>
+      </main>
+
+      <!-- Modal Setting -->
+      <div class="mobile__setting">
+        <div class="setting__content">
+          <!-- 1 - Header -->
+          <div class="setting__header">
+            <div class="setting__title">Settings</div>
+            <button class="close__btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7279 1.41421L11.3137 0L6.36396 4.94975L1.41421 0L0 1.41421L4.94975 6.36396L0 11.3137L1.41421 12.7279L6.36396 7.77817L11.3137 12.7279L12.7279 11.3137L7.77817 6.36396L12.7279 1.41421Z"
+                  fill="#1E213F"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- 2 - Body -->
+          <div class="setting__body">
+            <!-- setting time -->
+            <div class="setting__time">
+              <div class="setting__time-label">time (minutes)</div>
+
+              <div class="setting__time-container">
+                <!-- 1st input pomodoro -->
+                <div class="setting__time-input">
+                  <label for="pomodoro" class="setting__time--label">pomodoro</label>
+
+                  <div class="setting__time-input-container">
+                    <div class="setting__time-input-group">
+                      <input type="number" id="pomodoro" value="25" min="1" />
+                      <div class="setting__time-input-arrows">
+                        <img src="./starter-code/assets/icon-arrow-up.svg" alt="up" />
+                        <img src="./starter-code/assets/icon-arrow-down.svg" alt="down" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2nd input short break -->
+                <div class="setting__time-input">
+                  <label for="short-break" class="setting__time--label"
+                    >short break</label
+                  >
+
+                  <div class="setting__time-input-container">
+                    <div class="setting__time-input-group">
+                      <input type="number" id="short-break" value="5" min="1" />
+                      <div class="setting__time-input-arrows">
+                        <img src="./starter-code/assets/icon-arrow-up.svg" alt="up" />
+                        <img src="./starter-code/assets/icon-arrow-down.svg" alt="down" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3rd input long break -->
+                <div class="setting__time-input">
+                  <label for="long-break" class="setting__time--label">long break</label>
+
+                  <div class="setting__time-input-container">
+                    <div class="setting__time-input-group">
+                      <input type="number" id="long-break" value="5" min="1" />
+                      <div class="setting__time-input-arrows">
+                        <img src="./starter-code/assets/icon-arrow-up.svg" alt="up" />
+                        <img src="./starter-code/assets/icon-arrow-down.svg" alt="down" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="setting__time--line"></div>
+            </div>
+
+            <!-- setting font -->
+            <div class="setting__font">
+              <div class="setting__font-wrapper">
+                <div class="setting__font-label">font</div>
+                <div class="setting__font-options">
+                  <button
+                    class="setting__font-option kumbh-sans-font"
+                    data-tooltip="Kumbh Sans"
+                  >
+                    Aa
+                  </button>
+                  <button
+                    class="setting__font-option roboto-font"
+                    data-tooltip="Roboto Slab"
+                  >
+                    Aa
+                  </button>
+                  <button
+                    class="setting__font-option space-mono-font"
+                    data-tooltip="Space Mono"
+                  >
+                    Aa
+                  </button>
+                </div>
+              </div>
+
+              <div class="setting__font--line"></div>
+            </div>
+
+            <!-- setting color -->
+            <div class="setting__color">
+              <div class="setting__color-label">color</div>
+              <div class="setting__color-options">
+                <div class="setting__color-option color-red" data-tooltip="Red">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="11"
+                    viewBox="0 0 14 11"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.707031 5.20715L4.65966 9.15979L13.1123 0.707153"
+                      stroke="#161932"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+
+                <div class="setting__color-option color-cyan" data-tooltip="Cyan">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="11"
+                    viewBox="0 0 14 11"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.707031 5.20715L4.65966 9.15979L13.1123 0.707153"
+                      stroke="#161932"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+
+                <div class="setting__color-option color-purple" data-tooltip="Purple">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="11"
+                    viewBox="0 0 14 11"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.707031 5.20715L4.65966 9.15979L13.1123 0.707153"
+                      stroke="#161932"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="apply-btn">Apply</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

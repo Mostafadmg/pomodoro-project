@@ -1,0 +1,23 @@
+// ========================================
+// BREAKPOINTS
+// ========================================
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+
+// ========================================
+// MEDIA QUERY MIXINS
+// ========================================
+
+// Tablet and up
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Desktop and up
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}

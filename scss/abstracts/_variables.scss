@@ -1,0 +1,90 @@
+// ====================================
+// 🎨 COLOR SYSTEM
+// ====================================
+
+// Base colors
+$white: #ffffff;
+$black: #000000;
+
+// ===== Blue Shades =====
+$blue-950: #14172e;
+$blue-900: #161932;
+$blue-850: #1e213f;
+$blue-100: #d7e0ff;
+$blue-50: #eff1fa;
+
+// ===== Grey Shades =====
+$grey-400: #bbbdcb;
+$grey-200: #e4e2e2;
+
+// ===== Cyan =====
+$cyan-300: #70f3f8;
+
+// ===== Red =====
+$red-400: #f87070;
+
+// ===== Purple =====
+$purple-400: #db81f8;
+
+// ===== Gradient =====
+$gradient-1-start: #2e325a;
+$gradient-1-end: #0e112a;
+
+// Backwards-compatible color aliases (defined after the concrete color vars)
+$color-primary: $red-400;
+$color-secondary: $cyan-300;
+
+// For convenience, you can define gradients as ready-to-use variables:
+$gradient-1: linear-gradient(180deg, $gradient-1-start 0%, $gradient-1-end 100%);
+
+$base-space: 8px;
+
+$spacing-0: 0;
+$spacing-100: $base-space * 1; // 8px
+$spacing-200: $base-space * 2; // 16px
+$spacing-300: $base-space * 3; // 24px
+$spacing-400: $base-space * 4; // 32px
+$spacing-500: $base-space * 5; // 40px
+$spacing-600: $base-space * 6; // 48px
+$spacing-700: $base-space * 7; // 56px
+$spacing-800: $base-space * 8; // 64px
+$spacing-1000: $base-space * 10; // 80px
+
+// Backwards-compatible spacing aliases used by some partials
+$space-xs: 4px;
+$space-sm: $base-space; // 8px
+$space-md: $spacing-200; // 16px
+$space-lg: $spacing-300; // 24px
+
+// ==============================
+// ✍️ Font Families
+// ==============================
+
+// Primary app fonts (user-selectable)
+$font-kumbh: "Kumbh Sans", sans-serif;
+$font-roboto: "Roboto Slab", serif;
+$font-space: "Space Mono", monospace;
+// Fallback font stacks (for extra safety)
+$font-sans-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+$font-serif-fallback: Georgia, "Times New Roman", Times, serif;
+$font-mono-fallback: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Convenience alias used by older/other partials
+// Keep this as an alias to the primary sans stack so existing files that
+// reference `$font-sans` continue to work.
+$font-sans: $font-kumbh, $font-sans-fallback;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 120%;
+$line-height-normal: 125%;
+$line-height-loose: 150%;
+
+// Letter-spacing presets
+$letter-tight: -5px;
+$letter-normal: 0;
+$letter-wide: 1px;

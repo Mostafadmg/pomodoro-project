@@ -1,0 +1,61 @@
+/* _typography.scss — typography rules (placeholder) */
+
+body {
+  font-family: $font-sans, system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.4;
+  color: #222;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+.tab-font {
+  color: $blue-100;
+  text-align: center;
+
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+h1 {
+  color: var(--colors-blue-100, #d7e0ff);
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.timer-font {
+  color: var(--colors-blue-100, #d7e0ff);
+  text-align: center;
+
+  /* Text Preset 1 (Mobile, Font 2) - Roboto Slab Bold - 80px - 133% Line Height - -5px Line Spacing */
+  font-family: "Roboto Slab";
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133%; /* 6.65rem */
+}
+
+.pause-font {
+  color: var(--colors-blue-100, #d7e0ff);
+  text-align: center;
+  /* Text Preset 2 (Mobile, Font 2) - Roboto Slab Bold - 14px - 130% Line Height - 13px Line Spacing */
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 1.1375rem */
+  letter-spacing: 0.8125rem;
+  align-self: stretch;
+  text-transform: uppercase;
+}

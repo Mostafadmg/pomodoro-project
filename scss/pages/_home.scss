@@ -1,0 +1,95 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 18.75rem;
+
+  @include tablet {
+    width: 25.625rem;
+  }
+
+  @include desktop {
+    width: 25.625rem;
+  }
+}
+
+.timer-display {
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 999px;
+  background: var(--colors-gradient-1, linear-gradient(271deg, #2e325a 0%, #0e112a 100%));
+  box-shadow: -50px -50px 100px 0 #272c5a, 50px 50px 100px 0 #121530;
+  /* make the circle a flex container so its contents can be centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+
+  @include tablet {
+    width: 25.625rem;
+    height: 25.625rem;
+  }
+}
+
+.outer-border {
+  width: 16.73781rem;
+  height: 16.73781rem;
+  flex-shrink: 0;
+  border-radius: 16.73781rem;
+  background: $blue-900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    width: 22.875rem;
+    height: 22.875rem;
+    flex-shrink: 0;
+  }
+}
+
+.progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15.50306rem;
+  height: 15.50306rem;
+
+  @include tablet {
+    width: 21.1875rem;
+    height: 21.1875rem;
+    flex-shrink: 0;
+  }
+}
+
+.timer {
+  width: 11.9375rem;
+}
+
+.setting {
+  margin-top: 5rem;
+}
+
+.pause-and-restart {
+  cursor: pointer;
+
+  /* animate transform and opacity for smooth hover */
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  will-change: transform;
+
+  &:hover {
+    opacity: 0.7;
+    /* `scale` isn't a valid CSS property — use transform */
+    transform: scale(1.05);
+  }
+}
+
+.progress-bar {
+  pointer-events: none; /* lets clicks pass through */
+}
+.progress-bar path {
+  pointer-events: none;
+}

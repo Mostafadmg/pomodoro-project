@@ -1,0 +1,14 @@
+/* _grid.scss — simple grid utilities (restored)
+*/
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: $blue-850;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}
+
+.app {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+}
+
+body {
+  transition: font-family 0.3s ease;
+}
+
+/* Font families */
+.font--kumbh {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.font--roboto {
+  font-family: "Roboto Slab", serif;
+}
+
+.font--space {
+  font-family: "Space Mono", monospace;
+}
+:root {
+  --accent-color: #70f3f8; // default cyan
+}

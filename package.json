@@ -1,0 +1,16 @@
+{
+  "name": "pomodoro-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Pomodoro app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss/main.scss css/styles.css --style=expanded --source-map --no-error-css",
+    "watch": "sass --watch scss/main.scss:css/styles.css --style=expanded --source-map "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.93.3"
+  }
+}

@@ -1,0 +1,31 @@
+/* main.scss — imports for project partials
+   Updated to include the created partials (excludes sidebar, footer, cards, functions per request).
+*/
+
+// Abstracts (variables, mixins)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+// Vendors
+@import "vendors/normalize";
+
+// Components
+@import "components/buttons";
+@import "components/navbars";
+
+// Layout
+@import "layout/header";
+@import "layout/grid";
+
+// Pages
+@import "pages/home";
+@import "pages/settings";
+
+// Themes
+@import "themes/light";
+@import "themes/dark";

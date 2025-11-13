@@ -1,0 +1,429 @@
+/* _settings.scss — settings page specific styles (fixed for dynamic fonts) */
+
+.mobile__setting {
+  background-color: $white;
+  color: $blue-900;
+  border-radius: 0.9375rem;
+  width: 20.4375rem;
+  height: 37.9375rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  font-family: inherit; // ✅ inherit font dynamically
+  z-index: 40;
+
+  @include tablet {
+    width: 33.75rem;
+    height: 30.6875rem;
+  }
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* ================= HEADER ================= */
+
+.setting__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: $spacing-200;
+  border-bottom: 1px solid $grey-200;
+  padding: 1.5rem;
+}
+
+.setting__title {
+  font-family: inherit; // ✅ remove hardcoded font
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.close__btn {
+  & svg {
+    width: 0.7955rem;
+    height: 0.7955rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+  &:hover svg {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  &:active svg {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+}
+
+/* ================= TIME SECTION ================= */
+
+.setting__time {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-200;
+  padding-inline: 1.5rem;
+  font-family: inherit; // ✅ inherit global font
+
+  &--line {
+    width: 100%;
+    margin-top: $spacing-300;
+    background-color: $grey-200;
+    height: 1px;
+  }
+
+  &-label {
+    color: var(--colors-blue-900, #161932);
+    text-align: center;
+    font-family: inherit; // ✅ inherit
+    font-size: 0.6875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.26444rem;
+    padding-top: $spacing-200;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 0.8125rem;
+      text-align: left;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-100;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      gap: $spacing-100;
+    }
+  }
+
+  &-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    background: #eff1fa;
+    width: 8.75rem;
+    height: 2.5rem;
+
+    & input {
+      border: none;
+      background-color: transparent;
+      caret-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &[type="number"] {
+        -moz-appearance: textfield; // Firefox
+      }
+    }
+  }
+
+  &-input-group {
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.375rem;
+
+    input {
+      width: 100%;
+      text-align: left;
+      font-size: 1rem;
+      padding-left: 0.5rem;
+      line-height: 1;
+    }
+  }
+
+  &-input-arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0.25rem;
+
+    & img {
+      display: block;
+      cursor: pointer;
+      width: 0.875rem;
+      height: auto;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+      &:active {
+        transform: scale(0.95);
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &--label {
+    font-family: inherit; // ✅ inherit
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    opacity: 0.4;
+
+    @include tablet {
+      text-align: left;
+      align-self: flex-start;
+    }
+  }
+}
+
+/* ================= FONTS ================= */
+
+.setting__font {
+  padding-inline: 1.5rem;
+  padding-top: $spacing-300;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-200;
+  font-family: inherit; // ✅ inherit
+
+  &-label {
+    color: var(--colors-blue-900, #161932);
+    text-align: center;
+    font-family: inherit; // ✅ inherit
+    font-size: 0.6875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.26444rem;
+    text-transform: uppercase;
+    padding-bottom: $spacing-300;
+  }
+
+  &-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-200;
+  }
+
+  &-option {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    background-color: #eff1fa;
+    font-family: inherit; // ✅ ensure Aa preview uses the same global font
+
+    &:hover {
+      /* combine translate and scale into a single transform */
+      transform: translateY(-1px) scale(1.05);
+      background-color: $blue-900;
+      color: $white;
+    }
+
+    &--active {
+      background-color: $blue-900;
+      color: $white;
+    }
+  }
+
+  &--line {
+    width: 100%;
+    margin-top: $spacing-300;
+    background-color: $grey-200;
+    height: 1px;
+  }
+}
+
+/* keep these small samples to preview their individual font faces */
+.kumbh-sans-font {
+  font-family: $font-kumbh;
+}
+.roboto-font {
+  font-family: $font-roboto;
+}
+.space-mono-font {
+  font-family: $font-space;
+}
+
+/* ================= COLOR ================= */
+
+.setting__color {
+  padding-inline: 1.5rem;
+  font-family: inherit; // ✅ inherit
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $spacing-300;
+  }
+  &-label {
+    color: var(--colors-blue-900, #161932);
+    text-align: center;
+    font-family: inherit; // ✅ inherit
+    font-size: 0.6875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.26444rem;
+    padding-block: $spacing-300;
+    text-transform: uppercase;
+
+    @include tablet {
+      text-align: left;
+      padding-block: 0;
+      font-size: 0.8125rem;
+    }
+  }
+
+  &-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-200;
+    padding-top: $spacing-100;
+  }
+
+  &-option {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      opacity: 0;
+      transform: scale(0.6);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    &--active {
+      transform: scale(1.05); // subtle "pop" feedback
+
+      svg {
+        opacity: 1; // fade tick in
+        transform: scale(1); // smoothly grow to full size
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+
+    &:active {
+      transform: scale(0.95);
+      opacity: 0.9;
+    }
+  }
+}
+
+.color-red {
+  background-color: $red-400;
+}
+.color-cyan {
+  background-color: $cyan-300;
+}
+.color-purple {
+  background-color: $purple-400;
+}
+
+/* ================= APPLY BUTTON ================= */
+
+.apply-btn {
+  width: 8.75rem;
+  height: 3.3125rem;
+  background-color: $red-400;
+  border-radius: 999px;
+  color: $white;
+  font-family: inherit; // ✅ dynamic font
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(1.8rem);
+  transition: all 0.2s;
+
+  @include tablet {
+    bottom: 0;
+  }
+
+  &:hover {
+    background-color: darken($red-400, 10%);
+  }
+
+  &:active {
+    background-color: darken($red-400, 5%);
+    scale: 1;
+  }
+}
+
+.setting__title,
+.setting__font-label,
+.setting__time-label,
+.setting__color-label,
+.setting__time--label,
+.apply-btn {
+  line-height: 1.25; // ✅ equal line height for all fonts
+  letter-spacing: normal; // ✅ prevent serif vs sans width shifts
+  word-spacing: 0; // ✅ neutral word spacing
+  font-feature-settings: "liga", "kern"; // smoother alignment
+  font-variant-ligatures: common-ligatures;
+}
+
+.setting__font-wrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.setting__font-label {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+    font-size: 0.8125rem;
+  }
+}

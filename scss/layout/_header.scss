@@ -1,0 +1,32 @@
+/* _header.scss — header layout (placeholder) */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-500;
+}
+
+.tab-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $blue-900;
+  gap: $spacing-100;
+  padding-inline: 0.5rem;
+  border-radius: 999px;
+  height: 4rem;
+}
+
+.tab-options {
+  /*  background-color: $red-400; */
+  border-radius: 999px;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.5625rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 20;
+}
