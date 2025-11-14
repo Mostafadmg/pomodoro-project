@@ -91,6 +91,9 @@ function handleHold(arrow, actionFn) {
   arrow.addEventListener("click", (e) => e.preventDefault());
 }
 
+upArrows.forEach((arrow) => handleHold(arrow, increment));
+downArrows.forEach((arrow) => handleHold(arrow, decrement));
+
 /* ======================================================================= */
 /* FONT + COLOR SETTING LOGIC */
 /* ======================================================================= */
