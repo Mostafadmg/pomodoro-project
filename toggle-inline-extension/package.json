@@ -1,0 +1,35 @@
+{
+  "name": "toggle-inline-extension",
+  "displayName": "Toggle Inline Suggestions",
+  "publisher": "local",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/local/toggle-inline-extension"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "main": "extension.js",
+  "activationEvents": [
+    "onCommand:extension.toggleInlineSuggest",
+    "onCommand:extension.toggleCopilotInline",
+    "onCommand:extension.toggleAllInline"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.toggleInlineSuggest",
+        "title": "Toggle Inline Suggestions"
+      },
+      {
+        "command": "extension.toggleCopilotInline",
+        "title": "Toggle Copilot Inline Suggestions"
+      },
+      {
+        "command": "extension.toggleAllInline",
+        "title": "Toggle All Inline Suggestions (editor + Copilot)"
+      }
+    ]
+  }
+}

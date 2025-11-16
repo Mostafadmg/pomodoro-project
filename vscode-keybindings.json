@@ -1,0 +1,10 @@
+// Paste the entry below into Command Palette → Preferences: Open Keyboard Shortcuts (JSON)
+// This binds Ctrl+K Ctrl+I to toggle VS Code's inline suggestions (editor.inlineSuggest.enabled).
+// If you prefer a different key, change the "key" value before pasting.
+[
+  {
+    "key": "ctrl+k ctrl+i",
+    "command": "workbench.action.toggleSetting",
+    "args": { "setting": "editor.inlineSuggest.enabled" }
+  }
+]
